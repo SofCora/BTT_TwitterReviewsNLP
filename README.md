@@ -1,17 +1,77 @@
-# BTT_TwtitterReviewsNLP
-Classify book reviews as either positive or negative using a recurrent neural network **Deep Learning**
+# Sentiment Analysis of Book Reviews using Recurrent Neural Networks
 
-I chose  twitter sentiment analysis dataset from kaggle
-These tweets are all about a product or service and I'm going to be classifying them as either positive or negative
-This is a binary classification problem and there's no class imblanace.
-Socil media is a good way to measure public reception of a new product so being able to parse out key words and determine the sentiment of the review would be key for companies to determine which products are popular and should be recommended to customers. For twitter this model will be useful to seeing what prodcuts users like and what ads should be shown to them.
+## Overview
 
-· Describe the features that you will choose.
-· Choose a model (or models) that you will train.
-· Explain different data preparation techniques that you may use to prepare your data for your model.
-· Specify an evaluation metric that you think is appropriate for your model.
-· In your plan, describe your plan to train your model, analyze its performance and then improve the model. That is, describe your model building, validation and selection plan to produce a model that generalizes well to new data.
-	There is only one feature in this dataset, which is the text of the review itself. I plan on using neural networks to determine the overall sentiment, ideally a recurrent neural network but I may run into issues with execution bottlenecks. Because I plan on using neural networks the reviews must be preprocessed before the feature-ization process where each document is compressed into a word embedding vector. The data preparation may include converting everything to lower case, removing stop words, stemming, and parsing it into smaller chunks. 
-I'm going to be using AUC as the performance metric because it determines how well the predictions were regardless of their literal values and above any classification thresholds set.
+This project implements a deep learning model to classify book reviews as either positive or negative using a Recurrent Neural Network (RNN). The dataset used for this classification task originates from a Twitter sentiment analysis dataset sourced from Kaggle. Since social media plays a crucial role in gauging public reception of products and services, this model could be used to analyze sentiment and help companies understand consumer preferences.
 
-Will try both feed forward networks and recurrent and if RNN's just aren;t working I can try downsampling and seeing if a downsampled RNN outperforms a feed forward network with a full dataset because i know a RNN will have better performance if i had comensurate computing power.
+## Motivation
+
+The goal of this project is to explore deep learning techniques for Natural Language Processing (NLP), particularly using RNNs for sentiment analysis. The model's ability to parse key words and detect sentiment is useful for companies aiming to analyze customer feedback and improve recommendations.
+
+## Dataset
+
+The dataset consists of tweets related to various products and services, with each tweet labeled as either positive or negative. This is a binary classification problem with no class imbalance.
+
+## Features
+
+- **Text data**: The primary feature in this dataset is the text of the reviews themselves.
+
+## Data Preprocessing
+
+To prepare the data for training, the following preprocessing steps are applied:
+
+- Convert all text to lowercase
+- Remove stop words
+- Apply stemming
+- Tokenization
+- Convert text into word embeddings using an embedding layer
+
+## Model Architecture
+
+The model is based on a deep learning approach, utilizing:
+
+- Word embeddings mapped to tokens
+- Two Long Short-Term Memory (LSTM) layers for sequence processing
+- A final output layer for classification
+
+## Model Training and Evaluation
+
+- The model is trained using a combination of feed-forward and recurrent architectures.
+- Performance is evaluated using **AUC (Area Under the Curve)**, which measures classification effectiveness independently of any classification threshold.
+- If RNNs pose computational challenges, a downsampled RNN will be tested against a full dataset feed-forward network.
+
+## Potential Improvements
+
+- Experimenting with different neural network architectures (e.g., GRUs, Transformers)
+- Optimizing hyperparameters for better performance
+- Utilizing pre-trained word embeddings such as Word2Vec or GloVe
+
+## Requirements
+
+- Python
+- TensorFlow / PyTorch
+- Kaggle API (for dataset retrieval)
+- NLP libraries (e.g., NLTK, SpaCy)
+
+## How to Run
+
+1. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+2. Load and preprocess the dataset.
+3. Train the model using the Jupyter Notebook provided.
+4. Evaluate the model using the defined metrics.
+
+## Future Work
+
+- Implement sentiment analysis on other datasets
+- Expand the model to multi-class classification (e.g., neutral sentiment)
+- Deploy the model as an API for real-time analysis
+
+## Acknowledgments
+
+- Kaggle for providing the dataset
+- Open-source NLP and deep learning communities
+
+
