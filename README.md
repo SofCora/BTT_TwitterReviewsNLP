@@ -45,6 +45,7 @@ The model is based on a deep learning approach, utilizing:
 - Experimenting with different neural network architectures (e.g., GRUs, Transformers)
 - Optimizing hyperparameters for better performance
 - Utilizing pre-trained word embeddings such as Word2Vec or GloVe
+- Expand the model for multi-class classification
 
 ## Requirements
 
@@ -63,15 +64,5 @@ The model is based on a deep learning approach, utilizing:
 3. Train the model using the Jupyter Notebook provided.
 4. Evaluate the model using the defined metrics.
 
-## Future Work
-
-- Implement sentiment analysis on other datasets
-- Expand the model to multi-class classification (e.g., neutral sentiment)
-- Deploy the model as an API for real-time analysis
-
-## Acknowledgments
-
-- Kaggle for providing the dataset
-- Open-source NLP and deep learning communities
-
+# Dataset is from Kaggle
 
